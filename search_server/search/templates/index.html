@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>insta485</title>
+  <title>SearchEngine</title>
   <link rel="stylesheet" href="/static/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -10,7 +10,7 @@
 
 <body>
   <div class="feed">
-    <p class="ask485">ask485</p>
+    <p class="SearchEngine">WikiSearch</p>
     <p class="pagerank_weight">Pagerank Weight</p>
     <form action="/" method="GET">
       <div class="search_bar"><input type="text" name="q" value="{{display}}" /></div>
@@ -25,11 +25,10 @@
           {% if not doc.url %}
             <a class="doc_url">No url available</a>
           {% else %}
-            <a class="doc_url" href="{{doc.url}}">{{doc.url}}</a>
-          {% endif %}
-          <div class="doc_title">
-            <p>{{doc.title}}</p>
+          <div>
+            <a class="doc_title" href="{{doc.url}}">{{doc.title}}</a>
           </div>
+          {% endif %}
           <div class="doc_summary">
             {% if not doc.summary %}
               <p>No summary available</p>

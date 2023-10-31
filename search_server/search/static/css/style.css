@@ -5,12 +5,12 @@
   background: #FFFFFF;
 }
 
-.ask485 {
+.SearchEngine {
   position: absolute;
   width: 153px;
   height: 44px;
-  left: 63px;
-  top: 63px;
+  left: 40px;
+  top: 20px;
 
   font-family: Montserrat;
   font-style: normal;
@@ -58,11 +58,12 @@
   font-size: 26px;
   line-height: 30px;
 
-  color: #831349;
+  color: #FF60AC;
 
   margin-top: 10px;
   padding-top: 10px;
 }
+
 .doc_url {
   font-family: Roboto;
   font-style: normal;
@@ -79,8 +80,7 @@
   font-size: 14px;
   line-height: 16px;
   color: #535353;
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 1px;
   margin-bottom: 35px;
 }
 
