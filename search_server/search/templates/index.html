@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>insta485</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+  <div class="feed">
+    <p class="ask485">ask485</p>
+    <p class="pagerank_weight">Pagerank Weight</p>
+    <form action="/" method="GET">
+      <div class="search_bar"><input type="text" name="q" value="{{display}}" /></div>
+      <div><input type="range" name="w" min="0" max="1" step="0.01" value="{{slider}}" /></div>
+      <input type="submit" value="Search" />
+    </form>
+    <div class="docs">
+      {% if not docs %}
+        <div class="no_results">No search results found!</div>
+      {% else %}
+        {% for doc in docs %}
+          {% if not doc.url %}
+            <a class="doc_url">No url available</a>
+          {% else %}
+            <a class="doc_url" href="{{doc.url}}">{{doc.url}}</a>
+          {% endif %}
+          <div class="doc_title">
+            <p>{{doc.title}}</p>
+          </div>
+          <div class="doc_summary">
+            {% if not doc.summary %}
+              <p>No summary available</p>
+            {% else %}
+              <p>{{doc.summary}}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</body>
+
+</html>
